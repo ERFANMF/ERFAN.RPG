@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>معرفی Unity </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Tahoma", sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #eee;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffd5;
+      animation: fadeInDown 1s ease;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ffd5;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .content {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      color: #00ffd5;
+      margin-bottom: 20px;
+    }
+
+    .article {
+      background-color: #1f1f1f;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .article h2 {
+      color: #00ffd5;
+      margin-bottom: 20px;
+    }
+
+    .article p {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 40px;
+      border-top: 1px solid #333;
+    }
+
+    footer h3 {
+      margin-bottom: 10px;
+      color: #00ffd5;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: #1f1f1f;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ERFAN RPG</div>
+    <nav id="navbar">
+      <a href="index.html">خانه</a>
+      <a href="about.html">درباره من</a>
+      <a href="projects.html">پروژه‌ها</a>
+      <a href="article-unity.html">مقالات</a>
+      <a href="contact.html">ارتباط با ما</a>
+    </nav>  
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <section class="content">
+    <h1>معرفی Unity</h1>
+    <div class="article">
+      <h2>Unity چیست؟</h2>
+      <p>Unity یک موتور بازی‌سازی محبوب و رایگان است که به شما این امکان را می‌دهد تا بازی‌ها و شبیه‌سازی‌های سه‌بعدی یا دو‌بعدی بسازید. این ابزار برای افرادی که می‌خواهند در دنیای گیم‌دیزاین و توسعه بازی وارد شوند، گزینه‌ای عالی است. از سال 2005 که این موتور عرضه شد، به سرعت به یکی از محبوب‌ترین موتورهای بازی‌سازی در جهان تبدیل شد.</p>
+
+      <h2>ویژگی‌های Unity</h2>
+      <p>Unity ویژگی‌های منحصر به فردی دارد که آن را از سایر موتورهای بازی‌سازی متمایز می‌کند:</p>
+      <ul>
+        <li><strong>پشتیبانی از چند پلتفرم:</strong> Unity به شما این امکان را می‌دهد تا بازی‌های خود را برای پلتفرم‌های مختلف مانند ویندوز، macOS، iOS، اندروید، کنسول‌ها و حتی وب بسازید.</li>
+        <li><strong>موتور فیزیکی:</strong> این موتور دارای یک سیستم فیزیک پیشرفته است که تعاملات و حرکات طبیعی بین اشیاء را شبیه‌سازی می‌کند.</li>
+        <li><strong>ویرایشگر گرافیکی قدرتمند:</strong> Unity ویرایشگر گرافیکی ساده‌ای دارد که طراحی محیط بازی، تنظیمات نور، انیمیشن‌ها و بسیاری از ویژگی‌ها را به راحتی انجام می‌دهد.</li>
+        <li><strong>پشتیبانی از واقعیت مجازی و افزوده:</strong> Unity ابزارهایی را برای توسعه بازی‌ها و اپلیکیشن‌های واقعیت مجازی (VR) و واقعیت افزوده (AR) فراهم کرده است.</li>
+        <li><strong>مجموعه‌های آموزشی و جامعه فعال:</strong> Unity به دلیل جامعه گسترده‌اش، به توسعه‌دهندگان منابع و آموزش‌های فراوانی برای یادگیری و حل مشکلات خود ارائه می‌دهد.</li>
+      </ul>
+
+      <h2>چرا Unity را انتخاب کنیم؟</h2>
+      <p>یکی از دلایلی که Unity به یک انتخاب محبوب برای توسعه‌دهندگان تبدیل شده، آسانی کار با آن و امکانات گسترده‌اش است. این موتور بازی‌سازی به شما این امکان را می‌دهد که بدون نیاز به دانش عمیق در برنامه‌نویسی، بازی‌های حرفه‌ای بسازید. با استفاده از ابزارهای متنوع و سیستم اسکریپت‌نویسی C#، شما می‌توانید از امکانات زیادی برای شخصی‌سازی و بهینه‌سازی بازی‌های خود بهره ببرید.</p>
+
+      <h2>نتیجه‌گیری</h2>
+      <p>Unity با ویژگی‌های بی‌نظیر و جامعه فعال خود، انتخابی عالی برای هر توسعه‌دهنده‌ای است که می‌خواهد وارد دنیای بازی‌سازی شود. چه به عنوان یک مبتدی و چه به عنوان یک توسعه‌دهنده حرفه‌ای، Unity تمامی ابزارها و منابع مورد نیاز شما را فراهم می‌کند.</p>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Erfan Farahani</h3>
+    <p>برنامه‌نویس، گیم‌دولوپر و عاشق ساختن!</p>
+    <p>📧 erfanfarr1234@gmail.com</p>
+    <p>📱 0902-831-2158</p>
+    <p>© 2025 Erfan. همه حقوق محفوظ است.</p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

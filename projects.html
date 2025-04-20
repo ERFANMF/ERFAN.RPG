@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پروژه‌ها | ERFAN RPG</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Tahoma", sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #eee;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffd5;
+      animation: fadeInDown 1s ease;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ffd5;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .content {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      color: #00ffd5;
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      background-color: #1f1f1f;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      color: #00ffd5;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 40px;
+      border-top: 1px solid #333;
+    }
+
+    footer h3 {
+      margin-bottom: 10px;
+      color: #00ffd5;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: #1f1f1f;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ERFAN RPG</div>
+    <nav id="navbar">
+      <a href="index.html">خانه</a>
+      <a href="about.html">درباره من</a>
+      <a href="projects.html">پروژه‌ها</a>
+      <a href="article-unity.html">مقالات</a>
+      <a href="contact.html">ارتباط با ما</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <section class="content">
+    <h1>پروژه‌ها</h1>
+    <div class="projects">
+      <!-- پروژه اول -->
+      <div class="project-card">
+        <img src="images/need-for-speed.jpg" alt="Need For Speed">
+        <h3>Need For Speed</h3>
+        <p>یک بازی سرعتی و رقابتی که شما باید در جاده‌ها مسابقه بدید و از رقبای مختلف پیشی بگیرید.</p>
+      </div>
+
+      <!-- پروژه دوم -->
+      <div class="project-card">
+        <img src="images/the-jack-origin.jpg" alt="The Jack: Origin">
+        <h3>The Jack: Origin</h3>
+        <p>بازی دو بعدی پلتفرمر با داستانی جذاب و گیم‌پلی سرگرم‌کننده که بازیکن رو به دنیای جدیدی می‌برد.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Erfan Farahani</h3>
+    <p>برنامه‌نویس، گیم‌دولوپر و عاشق ساختن!</p>
+    <p>📧 erfanfarr1234@gmail.com</p>
+    <p>📱 0902-831-2158</p>
+    <p>© 2025 Erfan. همه حقوق محفوظ است.</p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
