@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ارتباط با ما | ERFAN RPG</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Tahoma", sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #eee;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffd5;
+      animation: fadeInDown 1s ease;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ffd5;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .content {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      color: #00ffd5;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-card {
+      background-color: #1f1f1f;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-card h3 {
+      color: #00ffd5;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      color: #ccc;  /* شماره تلفن رنگ */
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-card a {
+      color: #ccc;  /* لینک‌ها رنگ مشابه شماره تلفن */
+      text-decoration: none; /* خط زیر لینک‌ها برداشته شد */
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 40px;
+      border-top: 1px solid #333;
+    }
+
+    footer h3 {
+      margin-bottom: 10px;
+      color: #00ffd5;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: #1f1f1f;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ERFAN RPG</div>
+    <nav id="navbar">
+      <a href="index.html">خانه</a>
+      <a href="about.html">درباره من</a>
+      <a href="projects.html">پروژه‌ها</a>
+      <a href="article-unity.html">مقالات</a>
+      <a href="contact.html">ارتباط با ما</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <section class="content">
+    <h1>ارتباط با من</h1>
+    <div class="contact-info">
+      <div class="contact-card">
+        <h3>ایمیل:</h3>
+        <p>erfanfarr1234@gmail.com</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>شماره تلفن:</h3>
+        <p>09028312158</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>آدرس اینستاگرام:</h3>
+        <p><a href="https://www.instagram.com/erfan.rpg" target="_blank">erfan.rpg</a></p>
+      </div>
+
+      <div class="contact-card">
+        <h3>آدرس تلگرام:</h3>
+        <p><a href="https://t.me/erfanrpg" target="_blank">erfanrpg</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Erfan Farahani</h3>
+    <p>برنامه‌نویس، گیم‌دولوپر و عاشق ساختن!</p>
+    <p>📧 erfanfarr1234@gmail.com</p>
+    <p>📱 0902-831-2158</p>
+    <p>© 2025 Erfan. همه حقوق محفوظ است.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
